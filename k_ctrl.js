@@ -1063,7 +1063,6 @@
 									})
 								}
 							}
-							
 							$scope.mc2($scope.ming, $scope.riqi, $scope.store);
 							break;
 						case 2:
@@ -1670,7 +1669,7 @@
 			}
 
 			//初始化数据
-			$scope.initall = function(yy, m, d) {
+			$scope.initall = function(yy, m, d, ifwarn) {
 					var chu = $scope.selected.split('-');
 					var time = yy + '-' + m + '-' + d;
 					var dd;
@@ -1759,8 +1758,13 @@
 					if(tipshow != 0){
 						console.log('不报警！')
 					}else{
-						$scope.warning(1, 3, yy, m, dd);
-						$scope.warning(2, 3, yy, m, dd);
+						if(ifwarn == true){
+							console.log('无需重新检查警戒值')
+						}else{
+							$scope.warning(1, 3, yy, m, dd);
+							$scope.warning(2, 3, yy, m, dd);
+						}
+						
 					}
 				} //end initall
 
@@ -2018,7 +2022,7 @@
 
 					console.log('change')
 				} else {
-					$scope.initall($scope.ry, $scope.rm, $scope.rd);
+					$scope.initall($scope.ry, $scope.rm, $scope.rd,true);
 
 				}
 
