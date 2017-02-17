@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-filter.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!--<script type="text/javascript" src="k_ctrl.js"></script>-->
+
+		<style>
+				body {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				background-color: #0d47a1;
+				-webkit-user-select: none;
+				/*禁用手机浏览器的用户选择功能 */
+				-moz-user-select: none;
+				-webkit-touch-callout: none;
+				/*系统默认菜单被禁用*/
+				-webkit-user-select: none;
+				/*webkit浏览器*/
+				-khtml-user-select: none;
+				/*早期浏览器*/
+				-moz-user-select: none;
+				/*火狐*/
+				-ms-user-select: none;
+				/*IE10*/
+				user-select: none;
+			}
+			#ale {
+				position: absolute;
+				top: 150px;
+				left: 19%;
+				width: 450px;
+				height: 200px;
+				margin: 100px;
+				visibility: hidden;
+				z-index: 9999;
+				background-color: #FFFFFF;
+				border-radius: 6px;
+				text-align: center;
+
+			}
+		</style>
+	</head>
+
+	<body ng-controller="login" ng-cloak>
+		<div style="position: absolute;width: 70%;height: 500px;background-color: #ffffff;opacity: 0.3;border-radius: 12px;top: 130px;left: 15%;"></div>
+		<div style="position: absolute;width: 70%;height: 500px;background-color: transparent;border-radius: 12px;top: 130px;left: 15%;text-align: center;">
+			<img style="position: absolute;width: 26%;height: 100px;top: 30px;left: 37%;" src="images/touming.png" />
+			<p style="position: relative;width: 100%;font-size: 35px;color: #ffffff;word-spacing: 10px;letter-spacing: 10px;top: 110px;text-shadow: 2px 2px 5px #b39ddb;">欢迎使用行动工业监控看板</p>
+			<div style="position: relative;width: 70%;height: auto;left:15%;color: #f8bbd0;top: 120px;">
+				<div class="row">
+					<div class="input-field col s12">
+						<input value="" id="first_name2" type="text" class="validate" style="color: #ffffff;border:1px solid #f48fb1;border-radius: 4px;padding-left: 15px;font-size: 20px;line-height: 25px;" ng-model="UserID">
+						<label class="active" for="first_name2" style="color: #f48fb1;padding-left: 15px;font-size: 20px;line-height: 25px;">账号/UserID</label>
+					</div>
+					<div class="input-field col s12" style="top: 10px;">
+						<input value="" id="password" type="password" class="validate" style="color: #ffffff;border:1px solid #f48fb1;border-radius: 4px;padding-left: 15px;font-size: 20px;line-height: 25px;" ng-model="Password">
+						<label class="active" for="password" style="color: #f48fb1;padding-left: 15px;font-size: 20px;line-height: 25px;">密码/Password</label>
+					</div>
+				</div>
+         	</div>
+            <a class="waves-effect waves-light btn" style="position: relative;top: 140px;width: 200px;height: 38px;line-height: 40px;font-size: 18px;background-color: #64b5f6;" ng-click="login();">登录/Login</a>
+		    <a class="waves-effect waves-light btn" style="position: absolute;top: 432px;font-size: 18px;left:560px;color: #40C4FF;background-color: transparent;box-shadow: none;width: 110px;padding: 0;" href="http://xgjk.fupy.com.cn/Account/ForgotPassword">忘记密码？</a>
+		</div>
+		
+		
+		
+		<!--重写alert弹出框	-->
+		<div id="ale">			
+				<div style="width: 100%;height: 22%;line-height: 40px;font-size: 18px;background-color: #0277bd;border-radius: 6px 6px 0 0;color: #fff;">提示</div>                
+				<div style="width: 100%;height: 52%;line-height: 90px;font-size: 26px;color:#757575;text-align: center;">					
+					<div id="alert" style="float: left; width: 100%;height: 100%;font-size:smaller;"></div>
+				</div>
+				<div style="width: 100%;height: 40px;" >
+					<table style="width: 100%;height: 100%;border-top:1px solid lavender;border-radius: 6px !important;">
+						<tr>					
+							<td style="width: 100%;height: 100%;text-align: center;color:#0277bd;font-weight: bold;line-height: 20px;font-size: 18px;" onclick="side()">确定</td>
+						</tr>
+					</table>
+				</div>			
+		</div>
+
+	</body>
+	
+	<script>
+		function login($scope, $document, $http){
+			//获取当前时间
+			var today = new Date();
+			var month = today.getMonth() + 1;
+			var year = today.getFullYear();
+			$scope.nowt = today.getTime();
+			
+			//url
+			var host = 'http://10.17.255.16';
+//			var host = 'http://xgjk.fupy.com.cn';
+//			var host = 'http://10.17.255.22';
+//			var host = 'http://10.17.255.22:8088';
+			
+			$scope.UserID = '';
+			$scope.Password = '';
+			var uid = window.localStorage.getItem('userid');
+			$scope.UserID = uid;
+			//登录
+			$scope.login = function(){
+				$http.post(host + "/api/Account/Authenticate", {
+					UsernameOrEmailAddress: $scope.UserID,
+					Password: $scope.Password
+				}, {
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				}).success(function(res, status) {
+					if(res.success){
+						window.localStorage.setItem('token', res.result);
+						window.localStorage.setItem('time',$scope.nowt);
+						window.localStorage.setItem('userid',$scope.UserID);
+						window.localStorage.setItem('password',$scope.Password);
+						window.location.href="k_view.html";
+//						window.location.href='login.html'
+						
+					}
+					}).error(function(err, errstatus) {
+						var msg = '';
+						if(err.error.message == "登录失败!"){
+							msg = err.error.details+'('+err.error.message+')';//用户名密码错误
+						}else if(err.error.message == "您的请求无效!"){
+							msg = err.error.message; //接口错误
+						}else{
+							msg = '服务器错误!' //服务问题
+						}
+						if($scope.UserID == ''){
+							alt('请输入账号')
+						}else if($scope.Password == ''){
+							alt('请输入密码')
+						}else{
+							alt(msg)
+						}
+					console.log(err);
+				})
+			}
+			
+			//验证token是否有效
+			$scope.ifeffect = function() {
+				var t = window.localStorage.getItem('time');
+				var token = window.localStorage.getItem('token');
+				if(t != null || t != undefined){
+					if(token != null || token != undefined){
+						$http.post(host + '/api/services/app/reportDaily/GetSummaryByProductName', {
+							ProductName: 1,
+							ReportType: 1,
+							ReportSummaryType: 1,
+							ReportYear: year,
+							ReportMonth: month,
+							ReportDate: 0
+						}, {
+							headers: {
+								'Authorization': 'Bearer ' + token,
+								'Content-Type': 'application/json'
+							}
+						}).success(function(res, status) {
+							
+							if(res.success == true){
+								var dvalue = ($scope.nowt - t) / 3600000;
+								if(dvalue < 20) {
+									window.location.href="k_view.html";
+								}
+							}
+		
+						}).error(function(err, errstatus) {
+							console.log(err);
+						})
+					}else{
+						console.log('请获取token')
+					}
+				}else{
+					console.log('请获取token日期');
+				}
+			}
+			
+			$scope.ifeffect();
+		}
+	</script>
+	<script type="text/javascript">
+		angular.module('app', ['angular.filter']);
+		angular.bootstrap(document, ['app']);
+	</script>
+	
+	<script>
+		//重写alert弹出框
+		function alt(x) {
+			    document.getElementById("alert").innerHTML=x;
+				document.getElementById('ale').style.visibility = "visible";
+				document.getElementById('ale').style.opacity = "1";
+			}
+		//关闭alert弹出框
+		function side() {
+				document.getElementById('ale').style.visibility = "hidden";
+	}
+	</script>
+</html>
