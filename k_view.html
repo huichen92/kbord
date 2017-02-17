@@ -78,7 +78,22 @@
 				-moz-animation: text1 0.6s;
 				-ms-animation: text1 0.6s;
 				animation: text1 0.6s;
-				z-index: 0;
+			}
+			
+			#q {
+				position: fixed;
+				width: 98%;
+				left: 1%;
+				height: 88%;
+				top: 10%;
+				background-color: #ffffff;
+				opacity: 0.2;
+				border-radius: 5px;
+				display: none;
+				-webkit-animation: text1 0.6s;
+				-moz-animation: text1 0.6s;
+				-ms-animation: text1 0.6s;
+				animation: text1 0.6s;
 			}
 			
 			#dd2 {
@@ -119,7 +134,7 @@
 				width: 98%;
 				left: 1%;
 				height: 97%;
-				top: 2%;
+				top: 10%;
 				background-color: transparent;
 				border-radius: 5px;
 				display: none;
@@ -153,7 +168,7 @@
 				width: 98%;
 				left: 1%;
 				height: 97%;
-				top: 2%;
+				top: 10%;
 				background-color: transparent;
 				border-radius: 5px;
 				display: none;
@@ -169,7 +184,7 @@
 				width: 98%;
 				left: 1%;
 				height: 97%;
-				top: 2%;
+				top: 10%;
 				background-color: transparent;
 				border-radius: 5px;
 				display: none;
@@ -184,7 +199,7 @@
 				width: 98%;
 				left: 1%;
 				height: 97%;
-				top: 2%;
+				top: 10%;
 				background-color: transparent;
 				border-radius: 5px;
 				display: none;
@@ -245,7 +260,7 @@
 			.d11 {
 				float: left;
 				width: 38%;
-				height: 83%;
+				height: 80%;
 				margin-top: 6%;
 				margin-left: 1%;
 				overflow: auto;
@@ -258,7 +273,7 @@
 			.d12 {
 				float: left;
 				width: 59%;
-				height: 83%;
+				height: 80%;
 				margin-top: 6%;
 				margin-left: 1%;
 				overflow: auto;
@@ -401,7 +416,7 @@
 				font-size: 20px;
 				left: 29.2%;
 				transform: rotate(15deg);
-				-ms-transform: rotate(15deg); 
+				-ms-transform: rotate(15deg);
 				-moz-transform: rotate(15deg);
 				-webkit-transform: rotate(15deg);
 				-o-transform: rotate(15deg);
@@ -467,7 +482,7 @@
 				-webkit-transform: rotate(15deg);
 				-o-transform: rotate(15deg);
 				display: block;
-			} 
+			}
 			
 			.crice9 {
 				position: fixed;
@@ -475,7 +490,7 @@
 				font-weight: 700;
 				top: 390px;
 				font-size: 20px;
-				left: 93.8%;
+				left: 29.2%;
 				transform: rotate(15deg);
 				-ms-transform: rotate(15deg);
 				-moz-transform: rotate(15deg);
@@ -484,6 +499,52 @@
 				display: block;
 				z-index: 9999;
 			}
+			
+			.crice10 {
+				position: fixed;
+				color: red;
+				font-weight: 700;
+				top: 390px;
+				font-size: 20px;
+				left: 29.2%;
+				transform: rotate(15deg);
+				-ms-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				-webkit-transform: rotate(15deg);
+				-o-transform: rotate(15deg);
+				display: block;
+			}
+			
+			.crice11 {
+				position: fixed;
+				color: red;
+				font-weight: 700;
+				top: 390px;
+				font-size: 20px;
+				left: 61.6%;
+				transform: rotate(15deg);
+				-ms-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				-webkit-transform: rotate(15deg);
+				-o-transform: rotate(15deg);
+				display: block;
+			}
+			
+			.crice12 {
+				position: fixed;
+				color: red;
+				font-weight: 700;
+				top: 390px;
+				font-size: 20px;
+				left: 93.9%;
+				transform: rotate(15deg);
+				-ms-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				-webkit-transform: rotate(15deg);
+				-o-transform: rotate(15deg);
+				display: block;
+			}
+			
 			#ale {
 				position: absolute;
 				top: 150px;
@@ -496,7 +557,55 @@
 				background-color: #FFFFFF;
 				border-radius: 6px;
 				text-align: center;
-
+			}
+			
+			.same {
+				float: left;
+				width: 32%;
+				margin-left: 1%;
+				margin-top: 2%;
+				height: 45%;
+				background-color: #f5f5f5;
+			}
+			
+			@media screen and( max-width: 375px) {
+				.same {
+					float: left;
+					width: 90%;
+					margin-left: 1%;
+					margin-top: 2%;
+					height: 45%;
+					background-color: #f5f5f5;
+				}
+				body {
+					position: relative;
+					width: 375px;
+					height: 100%;
+					margin: 0;
+					padding: 0;
+					/*background-color: #242152;*/
+					background: -webkit-linear-gradient( top, #2e287a, #0277bd);
+					/* Safari 5.1 - 6.0 */
+					background: -o-linear-gradient( top, #2e287a, #0277bd);
+					/* Opera 11.1 - 12.0 */
+					background: -moz-linear-gradient( top, #2e287a, #0277bd);
+					/* Firefox 3.6 - 15 */
+					background: linear-gradient( top, #2e287a, #0277bd);
+					-webkit-user-select: none;
+					/*禁用手机浏览器的用户选择功能 */
+					-moz-user-select: none;
+					-webkit-touch-callout: none;
+					/*系统默认菜单被禁用*/
+					-webkit-user-select: none;
+					/*webkit浏览器*/
+					-khtml-user-select: none;
+					/*早期浏览器*/
+					-moz-user-select: none;
+					/*火狐*/
+					-ms-user-select: none;
+					/*IE10*/
+					user-select: none;
+				}
 			}
 		</style>
 
@@ -563,65 +672,9 @@
 			<button ng-click="canel()" style="background-color: #bdbdbd;width: 80%;height: 50px;margin-top: 20px;margin-left:10%;margin-right:auto;color: #ffffff;border-style: none;font-weight: 900;">稍后再说</button>
 		</div>
 		
-		<!--库存子页-->
 		
-		<div id="d4" style="top: 80px;z-index: 8888;">
-			<div class="11" style="position: absolute;width: 110%;height: 110%;margin-top: -30px;background-color: transparent;margin-left: -30px;"></div>
-			<a class="waves-effect waves-light btn but" ng-click="back();">X</a>
-			
-			<!--子页左边-->
-			<div class="d11" style="height: 570px;">
-				<div style="position: relative;width: 100%;height: 40px;color: #ffffff;font-size: 20px;background-color: #6ba4fa;line-height: 40px;font-weight: 600;">
-					<a class="waves-effect waves-light btn" style="float: left;width: 55.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{titname}}</a>
-					<a class="waves-effect waves-light btn" style="float: left;width: 27.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">当日结余量</a>
-					<a class="waves-effect waves-light btn" style="float: left;width: 17.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">差异值</a>
-				</div> 
-				
-				<div style="position: relative;" ng-repeat="e in detaildata">
-					<div class="card " style="margin: 0;height: 120px;text-align: center;">
-						<div id="{{e.materialNumber}}" class="card-content card-title activator grey-text text-darken-4" style="margin: 0;height: 120px;line-height: 90px;font-size: 18px;" ng-class="{$index:'change',111:'def'}[e.color]" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
-							<i style="float: left;width: 55.3%;padding: 0;">{{e.materialTypeName}}</i>
-							<i style="float: left;width: 27.3%;padding: 0;">{{e.dataValue}}{{e.unitName}}</i>
-							<i style="float: left;width: 17.3%;padding: 0;">{{e.difference}}{{e.unitName}}</i>
-
-						</div>
-						<div class="card-reveal" style="padding-top: 5px;height: 120px;padding: 0 !important;background-color: #f0f0f0;" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
-							<span class="card-title grey-text text-darken-4" style="width: 100%;font-size: 18px;color: #9e9e9e;height: 30px;padding-right: 8px;padding-top: 4px;"><i class=" right">X</i></span>
-							<div style="height: 38px;padding: 0;" ng-repeat="d in detaildata[$index].level">
-								<div style="">
-									<a class="waves-effect waves-light btn" style="float: left;width: 54%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.materialTypeName}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 27%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.dataValue}}{{d.unitName}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.difference}}</a>
-								
-								</div>
-								<!--<div style="">
-									<a class="waves-effect waves-light btn" style="float: left;width: 54%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.materialTypeName}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 27%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.dataValue}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.dataValue}}</a>
-								
-								</div>-->
-							</div>
-						</div>
-					</div>
-
-				</div>
-				
-				<a class="waves-effect waves-light btn" style="float: left;width: 55.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">total</a>
-				<a class="waves-effect waves-light btn" style="float: left;width: 31.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">{{total}}{{un}}</a>
-				<a class="waves-effect waves-light btn" style="float: left;width: 13.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;"> </a>
-			</div>
-			
-			<!--子页右边-->
-			<div class="d12" style="height: 570px;">
-				<a class="waves-effect waves-light btn" style="position:relative;float: left;width: 100%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table1();">{{btnday}}</a>
-				<!--<a class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table2();">{{btnmon}}</a>-->
-				<div id="d121" style="position: relative;width:592px;height: 540px;display: block;"></div>
-				<!--<div id="d131" style="position: relative;width:592px;height: 510px;display: none;"></div>-->
-			</div>
-			
-		</div>
         <!--第一页-->
-		<div class='pagewrap' style="position: relative;top: 60px;">
+		<div id="0" class='pagewrap' style="position: relative;top: 60px;">
 			<div class='pageblock' id='fullscreen'>
 				<div class='slider'>
 					<div class='slide' id="first">
@@ -689,42 +742,7 @@
 							</div> 
 							<a class="waves-effect waves-light btn" style="position: fixed;width: 90px;height: 90px;border-radius: 50%;margin-left: -19.7%;margin-top: 45.3%;background-color:transparent;border-style: none;box-shadow: 0 0 0 transparent;z-index: 99999;" ng-click="det6();"></a>
 						</div>
-						<!--子页-->
-						<div id="dd1"></div>
-						<!--子页(生产，出货)-->
-						<div id="d1">
-							<a class="waves-effect waves-light btn but" ng-click="back();">X</a>
-							<!--<select  style="position: fixed;width: 180px;margin-left: 2%;margin-top: 20px;color: #e0e0e0;height: 28px;font-size: 16px;font-weight: 900;display: block;" ng-model="ye" />-->
-
-							<!--子页左-->
-							<div class="d11">
-								<div style="position: relative;width: 100%;height: 40px;color: #ffffff;font-size: 20px;background-color: #6ba4fa;line-height: 40px;font-weight: 600;">
-									<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{titname}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{type}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">差异值</a>
-								</div>
-								<div style="position: relative;width: 100%;height: 55px;top: 0px;background-color: #eeeeee;" ng-repeat="e in detaildata">
-									<div id="tr1" style="position: relative;width: 100%;height: 55px;text-align: center;z-index: 9999;line-height: 55px;" ng-class="{$index:'change',111:'def'}[e.color]" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
-										<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.materialTypeName}}</a>
-										<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.dataValue}}{{e.unitName}}</a>
-										<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.difference}}{{e.unitName}}</a>
-									</div>
-								</div>
-
-								<a class="waves-effect waves-light btn" style="float: left;width: 35.4%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">total</a>
-								<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">{{total}}{{un}}</a>
-								<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;"> </a>
-							</div>
-							<!--子页右-->
-							<div class="d12">
-								<a id="tab1" class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table1();">{{btnday}}</a>
-								<a id="tab2" class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table2();">{{btnmon}}</a>
-								<div id="d12" style="position: relative;width:592px;height: 540px;display: block;"></div>
-								<div id="d13" style="position: relative;width:592px;height: 540px;display: none;"></div>
-							</div>
-						</div>
-
-						<!--子页(库存)-->
+						
 
 					</div>
 
@@ -770,46 +788,174 @@
 
 							</div>
 
-							<!--价格-->
-							<div style="float: left;width: 98%;margin-left: 1%;margin-top: 2%;height: 45%;background-color: #f5f5f5;">
-								<div style="position: relative;width: 100%;height: 40px;background-color: #7385eb;color: #FFFFFF;padding-top:4px;padding-left: 20px;font-weight: 900;font-size:24px;">价格<img style="position: relative;top: 2px;margin-left: 864px;" src="images/p4.png" /></div>
-								<!--<a class="waves-effect waves-light btn" style="position: fixed;width: 76%;height: 140px;margin-left: 10%;margin-top: 90px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;" ng-click="det7();"></a>-->
-								<div id="crice9" style="display: none;" class="crice9">New</div>
+							<!--新增-->
+							<div style="float: left;width: 32%;margin-left: 1%;margin-top: 2%;height: 45%;background-color: #f5f5f5;">
+								<div style="position: relative;width: 100%;height: 40px;background-color: #7385eb;color: #FFFFFF;padding-top:4px;padding-left: 20px;font-weight: 900;font-size:24px;">LAR<img style="position: relative;top: -34px;margin-left: 250px;" src="images/p2.png" /></div>
+								<div id="crice10" style="display: none;" class="crice10">New</div>
 
-								<table style="position: relative;width: 100%;height: 30px;background-color: #f5f5f5;top: 0px;text-align: center;">
-									<tr style="position: relative;width: 100%;height: 30px;text-align: center;">
-										<td style="width: 19%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>日期</span></td>
-										<td style="width: 16%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>料别</span></td>
-										<td style="width: 20%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>价格</span></td>
-										<td style="width: 10%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>涨跌</span></td>
-										<td style="width: 10%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>幅度</span></td>
-										<td style="width: 20%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>周均价</span></td>
-									</tr>
-								</table>
-								<div style="position: relative;width: 100%;height: 70%;top: 0px;overflow: auto;">
-									<div style="position: relative;width: 100%;height: 100%;background-color: #ffffff;top: 0px;">
-										<div style="position: relative;background-color: #ffffff;width: 100%;height: 50px;text-align: center;" ng-repeat="p in price" ng-click="det7(p);">
-											<!--<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.date}}</td>-->
-											<a class="waves-effect waves-light btn" style="float: left;width: 19.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.date}}</a>
-											<a class="waves-effect waves-light btn" style="float: left;width: 16.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.className}}</a>
-											<a class="waves-effect waves-light btn" style="float: left;width: 20.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.marketPrice}}{{p.units}}</a>
-											<a class="waves-effect waves-light btn" style="float: left;width: 10.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.riseAndFall}}</a>
-											<a class="waves-effect waves-light btn" style="float: left;width: 10.7%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.amplitude}}%</a>							
-											<a class="waves-effect waves-light btn" style="float: left;width: 20.7%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;" >{{p.weekMarketPrice}}{{p.units}}</a>
-											
-											<!--<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.className}}</td>
+                                 <div id="text8" style="position: relative;width: 96%;height: 265px;margin-top: 3px;margin-left: 4%;z-index: 9999;"></div>
+							</div>
+
+							<div style="float: left;width: 32%;margin-left: 1%;margin-top: 2%;height: 45%;background-color: #f5f5f5;">
+								<div style="position: relative;width: 100%;height: 40px;background-color: #7385eb;color: #FFFFFF;padding-top:4px;padding-left: 20px;font-weight: 900;font-size:24px;">LIN<img style="position: relative;top: -34px;margin-left: 250px;" src="images/p2.png" /></div>
+								<div id="crice11" style="display: none;" class="crice11">New</div>
+                                 <div id="text9" style="position: relative;width: 96%;height: 265px;margin-top: 3px;margin-left: 4%;z-index: 9999;"></div>
+							</div>
+
+							<div style="float: left;width: 32%;margin-left: 1%;margin-top: 2%;height: 45%;background-color: #f5f5f5;">
+								<div style="position: relative;width: 100%;height: 40px;background-color: #7385eb;color: #FFFFFF;padding-top:4px;padding-left: 20px;font-weight: 900;font-size:24px;">LOX<img style="position: relative;top: -34px;margin-left: 250px;" src="images/p2.png" /></div>
+								<div id="crice12" style="display: none;" class="crice12">New</div>
+                                 <div id="text10" style="position: relative;width: 96%;height: 265px;margin-top: 3px;margin-left: 4%;z-index: 9999;"></div>
+							</div>
+
+						</div>
+						
+					</div>
+					
+					
+					<!--第三页-->
+
+					<div class='slide' id="third">
+						<div style="position: fixed;width: 98%;left: 1%;height: 96%;top: 2%;background-color: #ffffff;opacity: 0.1;"></div>
+						<div style="float: left;width: 96%;margin-left: 2%;margin-top: 3.3%;height: 90%;background-color: #f5f5f5;">
+							<div style="position: relative;width: 100%;height: 40px;background-color: #7385eb;color: #FFFFFF;padding-top:4px;padding-left: 20px;font-weight: 900;font-size:24px;">价格<img style="position: relative;top: 2px;margin-left: 864px;" src="images/p4.png" /></div>
+							<!--<a class="waves-effect waves-light btn" style="position: fixed;width: 76%;height: 140px;margin-left: 10%;margin-top: 90px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;" ng-click="det7();"></a>-->
+							<div id="crice9" style="display: none;" class="crice9">New</div>
+
+							<table style="position: relative;width: 100%;height: 30px;background-color: #f5f5f5;top: 0px;text-align: center;">
+								<tr style="position: relative;width: 100%;height: 30px;text-align: center;">
+									<td style="width: 19%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>日期</span></td>
+									<td style="width: 16%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>料别</span></td>
+									<td style="width: 20%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>价格</span></td>
+									<td style="width: 10%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>涨跌</span></td>
+									<td style="width: 10%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>幅度</span></td>
+									<td style="width: 20%;color: #3a9ef0;font-size: 20px;text-align: center;height: 30px;line-height: 30px;"><span>周均价</span></td>
+								</tr>
+							</table>
+							<div style="position: relative;width: 100%;height: 82%;top: 0px;overflow: auto;">
+								<div style="position: relative;width: 100%;height: 100%;background-color: #ffffff;top: 0px;">
+									<div style="position: relative;background-color: #ffffff;width: 100%;height: 50px;text-align: center;" ng-repeat="p in price" ng-click="det7(p);">
+										<!--<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.date}}</td>-->
+										<a class="waves-effect waves-light btn" style="float: left;width: 19.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.date}}</a>
+										<a class="waves-effect waves-light btn" style="float: left;width: 16.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.className}}</a>
+										<a class="waves-effect waves-light btn" style="float: left;width: 20.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.marketPrice}}{{p.units}}</a>
+										<a class="waves-effect waves-light btn" style="float: left;width: 10.6%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.riseAndFall}}</a>
+										<a class="waves-effect waves-light btn" style="float: left;width: 10.7%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.amplitude}}</a>
+										<a class="waves-effect waves-light btn" style="float: left;width: 20.7%;height: 50px;color: #616161;font-size: 20px;text-align: center;background-color: transparent;line-height: 50px;box-shadow: none;">{{p.weekMarketPrice}}{{p.units}}</a>
+
+										<!--<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.className}}</td>
 											<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.marketPrice}}{{p.units}}</td>
 											<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.riseAndFall}}</td>
 											<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.amplitude}}%</td>
 											<td style="width: 16%;color: #616161;font-size: 16px;text-align: center;">{{p.weekMarketPrice}}{{p.units}}</td>-->
-										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
-						<!--原料子页-->
-						<div id="dd2"></div>
+
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="q"></div>
+		
+		<!--子页	-->
+		<!--子页(生产，出货)-->
+		<div id="d1">
+			<a class="waves-effect waves-light btn but" ng-click="back();">X</a>
+			<!--<select  style="position: fixed;width: 180px;margin-left: 2%;margin-top: 20px;color: #e0e0e0;height: 28px;font-size: 16px;font-weight: 900;display: block;" ng-model="ye" />-->
+
+			<!--子页左-->
+			<div class="d11">
+				<div style="position: relative;width: 100%;height: 40px;color: #ffffff;font-size: 20px;background-color: #6ba4fa;line-height: 40px;font-weight: 600;">
+					<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{titname}}</a>
+					<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{type}}</a>
+					<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">差异值</a>
+				</div>
+				<div style="position: relative;width: 100%;height: 55px;top: 0px;background-color: #eeeeee;" ng-repeat="e in detaildata">
+					<div id="tr1" style="position: relative;width: 100%;height: 55px;text-align: center;z-index: 9999;line-height: 55px;" ng-class="{$index:'change',111:'def'}[e.color]" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
+						<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.materialTypeName}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.dataValue}}{{e.unitName}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;height: 55px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{e.difference}}{{e.unitName}}</a>
+					</div>
+				</div>
+
+				<a class="waves-effect waves-light btn" style="float: left;width: 35.4%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">total</a>
+				<a class="waves-effect waves-light btn" style="float: left;width: 35.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">{{total}}{{un}}</a>
+				<a class="waves-effect waves-light btn" style="float: left;width: 29.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;"> </a>
+			</div>
+			<!--子页右-->
+			<div class="d12">
+				<a id="tab1" class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table1();">{{btnday}}</a>
+				<a id="tab2" class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table2();">{{btnmon}}</a>
+				<div id="d12" style="position: relative;width:592px;height: 540px;display: block;"></div>
+				<div id="d13" style="position: relative;width:592px;height: 540px;display: none;"></div>
+			</div>
+		</div>
+
+		<!--库存子页-->
+
+		<div id="d4" style="top: 80px;z-index: 8888;">
+			<div class="11" style="position: absolute;width: 110%;height: 110%;margin-top: -30px;background-color: transparent;margin-left: -30px;"></div>
+			<a class="waves-effect waves-light btn but" ng-click="back();">X</a>
+
+			<!--子页左边-->
+			<div class="d11" >
+				<div style="position: relative;width: 100%;height: 40px;color: #ffffff;font-size: 20px;background-color: #6ba4fa;line-height: 40px;font-weight: 600;">
+					<a class="waves-effect waves-light btn" style="float: left;width: 55.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">{{titname}}</a>
+					<a class="waves-effect waves-light btn" style="float: left;width: 27.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">当日结余量</a>
+					<a class="waves-effect waves-light btn" style="float: left;width: 17.3%;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 40px;padding: 0;">差异值</a>
+				</div>
+
+				<div style="position: relative;" ng-repeat="e in detaildata">
+					<div class="card " style="margin: 0;height: 120px;text-align: center;">
+						<div id="{{e.materialNumber}}" class="card-content card-title activator grey-text text-darken-4" style="margin: 0;height: 120px;line-height: 90px;font-size: 18px;" ng-class="{$index:'change',111:'def'}[e.color]" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
+							<i style="float: left;width: 55.3%;padding: 0;">{{e.materialTypeName}}</i>
+							<i style="float: left;width: 27.3%;padding: 0;">{{e.dataValue}}{{e.unitName}}</i>
+							<i style="float: left;width: 17.3%;padding: 0;">{{e.difference}}{{e.unitName}}</i>
+						</div>
+						<div class="card-reveal" style="padding-top: 5px;height: 120px;padding: 0 !important;background-color: #f0f0f0;" ng-click="mark($index,e.materialNumber,e.materialTypeName);">
+							<span class="card-title grey-text text-darken-4" style="width: 100%;font-size: 18px;color: #9e9e9e;height: 30px;padding-right: 8px;padding-top: 4px;"><i class=" right">X</i></span>
+							<div style="height: 38px;padding: 0;" ng-repeat="d in detaildata[$index].level">
+								<div style="">
+									<a class="waves-effect waves-light btn" style="float: left;width: 54%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.materialTypeName}}</a>
+									<a class="waves-effect waves-light btn" style="float: left;width: 27%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.dataValue}}{{d.unitName}}</a>
+									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 38px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 38px;padding: 0;margin-top: 8px;">{{d.difference}}</a>
+
+								</div>
+								<!--<div style="">
+									<a class="waves-effect waves-light btn" style="float: left;width: 54%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.materialTypeName}}</a>
+									<a class="waves-effect waves-light btn" style="float: left;width: 27%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.dataValue}}</a>
+									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 45px;color: #616161;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 45px;padding: 0;">{{e.dataValue}}</a>
+								
+								</div>-->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<a class="waves-effect waves-light btn" style="float: left;width: 55.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">total</a>
+				<a class="waves-effect waves-light btn" style="float: left;width: 31.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;">{{total}}{{un}}</a>
+				<a class="waves-effect waves-light btn" style="float: left;width: 13.3%;color: #616161;font-size: 18px;background-color: #f5f5f5;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;height: 55px;padding: 0;"> </a>
+			</div>
+
+			<!--子页右边-->
+			<div class="d12">
+				<a class="waves-effect waves-light btn" style="position:relative;float: left;width: 100%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table1();">{{btnday}}</a>
+				<!--<a class="waves-effect waves-light btn" style="position:relative;float: left;width: 50%;height: 40px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table2();">{{btnmon}}</a>-->
+				<div id="d121" style="position: relative;width:592px;height: 540px;display: block;"></div>
+				<!--<div id="d131" style="position: relative;width:592px;height: 510px;display: none;"></div>-->
+			</div>
+
+		</div>
+		
+		<!--原料子页-->
+						
 						<div id="d5">
 							<a class="waves-effect waves-light btn but" ng-click="back2();">X</a>
 							<!--<input  style="position: fixed;width: 180px;margin-left: 2%;margin-top: 20px;color: #e0e0e0;height: 28px;font-size: 16px;font-weight: 900;display: block;" type="date" value="" ng-model="DD" />-->
@@ -848,7 +994,7 @@
 						</div>
 
 						<!--能源子页-->
-						<div id="de2"></div>
+						
 						<div id="de5">
 							<a class="waves-effect waves-light btn but" ng-click="back3();">X</a>
 							<!--<input  style="position: fixed;width: 180px;margin-left: 2%;margin-top: 20px;color: #e0e0e0;height: 28px;font-size: 16px;font-weight: 900;display: block;" type="date" value="" ng-model="DD" />-->
@@ -863,9 +1009,10 @@
 								<div style="position: relative;width: 100%;height: 55px;top: 0px;background-color: #eeeeee;" ng-repeat="ee in dayuse2">
 									<div id="tre1" style="position: relative;width: 100%;height: 55px;text-align: center;z-index: 9999;line-height: 55px;" ng-class="{$index:'change',111:'def'}[ee.color]" ng-click="mark2($index,ee.materialNumber,ee.materialTypeName,true);">
 										<a class="waves-effect waves-light btn" style="float: left;width: 42%;height: 55px;color: #616161;font-size: 16px;padding-left: 30px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{ee.materialTypeName}}</a>
-										<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 55px;color: #616161;font-size: 16px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{ee.dataValue}}</a>    <!--{{ee.unitName}}-->
+										<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 55px;color: #616161;font-size: 16px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{ee.dataValue}}</a>
+										<!--{{ee.unitName}}-->
 										<a class="waves-effect waves-light btn" style="float: left;width: 28%;height: 55px;color: #616161;font-size: 16px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 55px;padding: 0;">{{ee.eData}}
-										    <img id="img" ng-src="{{ee.src}}"  style="float: right;width: 10px;height: 15px;display: block;margin-right:20px;margin-top: 20px;"/>
+											<img id="img" ng-src="{{ee.src}}" style="float: right;width: 10px;height: 15px;display: block;margin-right:20px;margin-top: 20px;" />
 										</a>
 
 									</div>
@@ -878,7 +1025,7 @@
 							</div>
 							<!--子页右-->
 							<div class="d12">
-								
+
 								<a id="tt3" class="waves-effect waves-light btn" style="position:relative;float: left;width: 25%;height: 40px;font-size: 14px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table3();">{{perday}}</a>
 								<a id="tt4" class="waves-effect waves-light btn" style="position:relative;float: left;width: 25%;height: 40px;font-size: 14px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table4();">{{permon}}</a>
 								<a id="tt1" class="waves-effect waves-light btn" style="position:relative;float: left;width: 25%;height: 40px;font-size: 14px;background-color: #6ba4fa;color: #ffffff;line-height: 40px;" ng-click="table1();">{{btnday}}</a>
@@ -890,87 +1037,83 @@
 							</div>
 						</div>
 
-						<!--价格子页-->
-						<div id="d2">
-							<a class="waves-effect waves-light btn but" ng-click="back2();">X</a>
-							
-							<a id="a2" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;margin-left: 4%;" ng-click="table12();">PTA</a>
-							<a id="a1" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table11();">乙烯</a>	
-							<a id="a3" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table13();">对二甲苯</a>
-							<a id="a4" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table14();">乙二醇</a>
-							<a id="a5" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table15();">环氧乙烷</a>
-							<a id="a6" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table10();">国际原油</a>
+		<!--价格子页-->
+		<div id="d2">
+			<a class="waves-effect waves-light btn but" ng-click="back2();">X</a>
 
-							<div id="price1" style="position: relative;width:955px;height: 670px;display: block;top: -30px;overflow: auto;background-color: transparent;left: 20px;">
-							</div>
-							<div id="price2" style="position: relative;width:1055px;height: 700px;display: none;top: -30px;overflow: auto;background-color: transparent;left: -60px;">
-							</div>
-							<div id="ptab1" style="position: absolute;width:900px;height: 510px;display: none;top: 130px;overflow: auto;left: 52px;background-color: transparent;">
-								<div id="p1" style="width:880px;height: 480px;top: 30px;left: 15px;"></div>
-								<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 93.4%;padding: 0;" ng-click="chin3();">X</a>
-							</div>
-							<div id="ptab2" style="position: absolute;width:980px;height: 510px;display: none;top: 130px;left: 52px;background-color: transparent;">
-							    <div id="ptab0" style="position: absolute;width:880px;height: 510px;top: 30px;"></div>
-								<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 86%;padding: 0;" ng-click="chin8();">X</a>
-							
-							</div>
-							<div id="ptab" style="position: absolute;width:980px;height: 510px;display: none;top: 130px;left: 52px;background-color: transparent;">
-								<div id="ptab3" style="width:880px;height: 510px;top: 0px;"></div>
-								<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 5px;left: 86%;padding: 0;" ng-click="chin6();">X</a>
-							</div>
-							<div id="p2" style="position: absolute;width: 890px;height: 510px;display: none;top:110px;left: 65px;overflow: auto;">
-                              <a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 93%;padding: 0;" ng-click="chin7();">X</a>
-                              <div style="height: auto;margin-top: 50px;">
-								<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #4db6ac;border: 1px solid #9fa8da;top:0px;">
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">日期</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">地区</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">厂家</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格条件</a>
-									
-								</div>
-								<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #ffffff;border: 1px solid #9fa8da;top:0px;" ng-click="chin2(pp);" ng-repeat="pp in areaprice">
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.date}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.area}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.marketName}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.marketPrice}}{{pp.units}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.termsOfPrice}}</a>
-									
-								</div>
-                               </div>
-							</div>
-							<div id="p3" style="position: absolute;width: 890px;height: 510px;display: none;top:140px;left: 65px;overflow: auto;">
-                             <div style="height: auto;">
-								<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #4db6ac;border: 1px solid #9fa8da;top:0px;">
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">日期</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">市场</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 40%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格条件</a>
-								
-								</div>
-								<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #ffffff;border: 1px solid #9fa8da;top: 0px;" ng-click="chin5(mp);" ng-repeat="mp in marketprc">
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.date}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.marketName}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.marketPrice}}{{mp.units}}</a>
-									<a class="waves-effect waves-light btn" style="float: left;width: 40%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.termsOfPrice}}</a>
-									
-								</div>
-                             </div>
-							</div>
+			<a id="a2" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;margin-left: 4%;" ng-click="table12();">PTA</a>
+			<a id="a1" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table11();">乙烯</a>
+			<a id="a3" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table13();">对二甲苯</a>
+			<a id="a4" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table14();">乙二醇</a>
+			<a id="a5" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table15();">环氧乙烷</a>
+			<a id="a6" class="waves-effect waves-light btn" style="position:relative;float: left;width: 15%;height: 40px;background-color: transparent;color: #ffccbc;line-height: 40px;margin-top: 10px;" ng-click="table10();">国际原油</a>
 
-							<a id="a11" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 60px;width: 75px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #fff8e1;" ng-click="inter();">国际价</a>
-							<a id="a22" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 140px;width: 75px;height: 33px;line-height: 33px;background-color: #303f9f;border-style: none;color: #ffffff;" ng-click="chin();">出厂价</a>
-							<a id="a33" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 220px;width: 75px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #fff8e1;" ng-click="chin4();">市场价</a>
-							
-							<a id="a44" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 560px;width: 95px;height: 33px;line-height: 33px;background-color: #ffe0b2;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time1();">30天</a>
-							<a id="a55" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 660px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time2();">90天</a>
-							<a id="a66" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 760px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time3();">180天</a>
-							<a id="a77" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 860px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time4();">360天</a>
-						
-						</div>
+			<div id="price1" style="position: relative;width:955px;height: 670px;display: block;top: -30px;overflow: auto;background-color: transparent;left: 20px;">
+			</div>
+			<div id="price2" style="position: relative;width:1055px;height: 700px;display: none;top: -30px;overflow: auto;background-color: transparent;left: -60px;">
+			</div>
+			<div id="ptab1" style="position: absolute;width:900px;height: 510px;display: none;top: 130px;overflow: auto;left: 52px;background-color: transparent;">
+				<div id="p1" style="width:880px;height: 480px;top: 30px;left: 15px;"></div>
+				<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 93.4%;padding: 0;" ng-click="chin3();">X</a>
+			</div>
+			<div id="ptab2" style="position: absolute;width:980px;height: 510px;display: none;top: 130px;left: 52px;background-color: transparent;">
+				<div id="ptab0" style="position: absolute;width:880px;height: 510px;top: 30px;"></div>
+				<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 86%;padding: 0;" ng-click="chin8();">X</a>
+
+			</div>
+			<div id="ptab" style="position: absolute;width:980px;height: 510px;display: none;top: 130px;left: 52px;background-color: transparent;">
+				<div id="ptab3" style="width:880px;height: 510px;top: 0px;"></div>
+				<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 5px;left: 86%;padding: 0;" ng-click="chin6();">X</a>
+			</div>
+			<div id="p2" style="position: absolute;width: 890px;height: 510px;display: none;top:110px;left: 65px;overflow: auto;">
+				<a class="waves-effect waves-light btn" style="position: absolute;width: 36px;height: 36px;border-radius: 50%;background-color: transparent;top: 0px;left: 93%;padding: 0;" ng-click="chin7();">X</a>
+				<div style="height: auto;margin-top: 50px;">
+					<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #4db6ac;border: 1px solid #9fa8da;top:0px;">
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">日期</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">地区</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">厂家</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格条件</a>
+
+					</div>
+					<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #ffffff;border: 1px solid #9fa8da;top:0px;" ng-click="chin2(pp);" ng-repeat="pp in areaprice">
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.date}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.area}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.marketName}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 15%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.marketPrice}}{{pp.units}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 30%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{pp.termsOfPrice}}</a>
+
 					</div>
 				</div>
 			</div>
+			<div id="p3" style="position: absolute;width: 890px;height: 510px;display: none;top:140px;left: 65px;overflow: auto;">
+				<div style="height: auto;">
+					<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #4db6ac;border: 1px solid #9fa8da;top:0px;">
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">日期</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">市场</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 40%;height: 50px;color: #4db6ac;font-size: 20px;font-weight: 800;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">价格条件</a>
+
+					</div>
+					<div style="position: relative;width: 99.9%;height: 50px;line-height: 50px;text-align: center;color: #ffffff;border: 1px solid #9fa8da;top: 0px;" ng-click="chin5(mp);" ng-repeat="mp in marketprc">
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.date}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.marketName}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 20%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.marketPrice}}{{mp.units}}</a>
+						<a class="waves-effect waves-light btn" style="float: left;width: 40%;height: 50px;color: #ffffff;font-size: 18px;background-color: transparent;border-style: none;box-shadow: 0 0 0 transparent;line-height: 50px;padding: 0;">{{mp.termsOfPrice}}</a>
+
+					</div>
+				</div>
+			</div>
+
+			<a id="a11" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 60px;width: 75px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #fff8e1;" ng-click="inter();">国际价</a>
+			<a id="a22" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 140px;width: 75px;height: 33px;line-height: 33px;background-color: #303f9f;border-style: none;color: #ffffff;" ng-click="chin();">出厂价</a>
+			<a id="a33" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 220px;width: 75px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #fff8e1;" ng-click="chin4();">市场价</a>
+
+			<a id="a44" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 560px;width: 95px;height: 33px;line-height: 33px;background-color: #ffe0b2;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time1();">30天</a>
+			<a id="a55" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 660px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time2();">90天</a>
+			<a id="a66" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 760px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time3();">180天</a>
+			<a id="a77" class="waves-effect waves-light btn" style="position: absolute;top: 75px;padding: 0;left: 860px;width: 95px;height: 33px;line-height: 33px;background-color: transparent;border-style: none;color: #ffffff;display: none;text-shadow: 0px 0px 8px #616161;" ng-click="time4();">360天</a>
+
 		</div>
 		
 		
