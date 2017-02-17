@@ -2425,18 +2425,9 @@
 				$scope.tit = 'EOG 当日生产量(T)';
 				$scope.btnday = '日产量';
 				$scope.btnmon = '月产量';
-				document.getElementById('d0').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d1').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice1').style.display = "none";
-				document.getElementById('text').style.display = "block";
-
-				document.getElementById('tab1').style.backgroundColor = "#0059BC";
-				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('d12').style.display = "block";
-				document.getElementById('d13').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
+				document.getElementById('q').style.display = "block";
 				$scope.clear2();
 			}
 			$scope.det2 = function() {
@@ -2459,18 +2450,21 @@
 				$scope.tit = 'EOG 当日出货量(T)';
 				$scope.btnday = '日出货量';
 				$scope.btnmon = '月出货量';
-				document.getElementById('d0').style.display = "none";
+//				document.getElementById('d0').style.display = "none";
+//				document.getElementById('d1').style.display = "block";
+//				document.getElementById('dd1').style.display = "block";
+//				document.getElementById('date').style.display = "none";
+//				document.getElementById('crice2').style.display = "none";
+//				document.getElementById('text').style.display = "block";
+//
+//				document.getElementById('tab1').style.backgroundColor = "#0059BC";
+//				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
+//				document.getElementById('d12').style.display = "block";
+//				document.getElementById('d13').style.display = "none";
+//				document.getElementById('ref').style.display = 'none';
+                document.getElementById('0').style.display = "none";
 				document.getElementById('d1').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice2').style.display = "none";
-				document.getElementById('text').style.display = "block";
-
-				document.getElementById('tab1').style.backgroundColor = "#0059BC";
-				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('d12').style.display = "block";
-				document.getElementById('d13').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
+				document.getElementById('q').style.display = "block";
 				$scope.clear2();
 			}
 			$scope.det3 = function() {
@@ -2489,18 +2483,9 @@
 				$scope.tit = 'ASU 当日生产量(T)';
 				$scope.btnday = '日产量';
 				$scope.btnmon = '月产量';
-				document.getElementById('d0').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d1').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice4').style.display = "none";
-				document.getElementById('text').style.display = "block";
-
-				document.getElementById('tab1').style.backgroundColor = "#0059BC";
-				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('d12').style.display = "block";
-				document.getElementById('d13').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
+				document.getElementById('q').style.display = "block";
 				$scope.clear2();
 			}
 			$scope.det4 = function() {
@@ -2524,18 +2509,9 @@
 				$scope.tit = 'ASU 当日出货量(T)';
 				$scope.btnday = '日出货量';
 				$scope.btnmon = '月出货量';
-				document.getElementById('d0').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d1').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice5').style.display = "none";
-				document.getElementById('text').style.display = "block";
-
-				document.getElementById('tab1').style.backgroundColor = "#0059BC";
-				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('d12').style.display = "block";
-				document.getElementById('d13').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
+				document.getElementById('q').style.display = "block";
 				$scope.clear2();
 			}
 			$scope.det5 = function() {
@@ -2552,13 +2528,15 @@
 				$scope.tit = 'EOG 当日结余量(T)'
 				$scope.btnday = '日库存量';
 				$scope.btnmon = '月库存量';
-				document.getElementById('d0').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d4').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
+				document.getElementById('q').style.display = "block";
+
+				//				document.getElementById('dd1').style.display = "block";
+				//				document.getElementById('date').style.display = "none";
 				document.getElementById('crice3').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
-				document.getElementById('text').style.display = "block";
+				//				document.getElementById('ref').style.display = 'none';
+				//				document.getElementById('text').style.display = "block";
 
 				$scope.clear2();
 			}
@@ -2576,13 +2554,15 @@
 				$scope.tit = 'ASU 当日结余量(T)'
 				$scope.btnday = '日库存量';
 				$scope.btnmon = '月库存量';
-				document.getElementById('d0').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d4').style.display = "block";
-				document.getElementById('dd1').style.display = "block";
-				document.getElementById('date').style.display = "none";
+				document.getElementById('q').style.display = "block";
+
+				//				document.getElementById('dd1').style.display = "block";
+				//				document.getElementById('date').style.display = "none";
 				document.getElementById('crice6').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
-				document.getElementById('text').style.display = "block";
+				//				document.getElementById('ref').style.display = 'none';
+				//				document.getElementById('text').style.display = "block";
 
 				$scope.clear2();
 			}
@@ -2600,21 +2580,9 @@
 				$scope.perday = '日单耗';
 				$scope.permon = '月单耗';
 				$scope.mark2(0, num, name, true);
-				document.getElementById('d3').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d5').style.display = "block";
-				document.getElementById('dd2').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice7').style.display = "none";
-				document.getElementById('t1').style.backgroundColor = "#0059BC";
-				document.getElementById('t2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('t3').style.backgroundColor = "#6ba4fa";
-				document.getElementById('t4').style.backgroundColor = "#6ba4fa";
-				document.getElementById('d122').style.display = "block";
-				document.getElementById('d132').style.display = "none";
-				document.getElementById('ds132').style.display = "none";
-				document.getElementById('ds122').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
-				document.getElementById('text').style.display = "block";
+				document.getElementById('q').style.display = "block";
 
 				$scope.clear1();
 			}
@@ -2632,21 +2600,9 @@
 				$scope.perday = '日单耗';
 				$scope.permon = '月单耗';
 				$scope.mark2(0, num, name, true);
-				document.getElementById('d3').style.display = "none";
+				document.getElementById('0').style.display = "none";
 				document.getElementById('de5').style.display = "block";
-				document.getElementById('de2').style.display = "block";
-				document.getElementById('date').style.display = "none";
-				document.getElementById('crice8').style.display = "none";
-				document.getElementById('tt3').style.backgroundColor = "#0059BC";
-				document.getElementById('tt4').style.backgroundColor = "#6ba4fa";
-				document.getElementById('tt1').style.backgroundColor = "#6ba4fa";
-				document.getElementById('tt2').style.backgroundColor = "#6ba4fa";
-				document.getElementById('des122').style.display = "block";
-				document.getElementById('des132').style.display = "none";
-				document.getElementById('de122').style.display = "none";
-				document.getElementById('de132').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
-				document.getElementById('text').style.display = "block";
+				document.getElementById('q').style.display = "block";
 
 				$scope.clear1();
 			}
@@ -2692,13 +2648,16 @@
 						break;
 				}
 
-				document.getElementById('d3').style.display = "none";
-				document.getElementById('d2').style.display = "block";
-				document.getElementById('dd2').style.display = "block";
-				document.getElementById('date').style.display = "none";
+				//				document.getElementById('d3').style.display = "none";
+				//				document.getElementById('d2').style.display = "block";
+				//				document.getElementById('dd2').style.display = "block";
+				//				document.getElementById('date').style.display = "none";
 				document.getElementById('crice9').style.display = "none";
-				document.getElementById('ref').style.display = 'none';
-				document.getElementById('text').style.display = "block";
+				//				document.getElementById('ref').style.display = 'none';
+				//				document.getElementById('text').style.display = "block";
+				document.getElementById('0').style.display = "none";
+				document.getElementById('d2').style.display = "block";
+				document.getElementById('q').style.display = "block";
 
 				$scope.clear1();
 
@@ -3427,6 +3386,14 @@
 				},
 				color: ['#ff9800'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					boundaryGap: false,
 					type: 'category',
@@ -3513,6 +3480,14 @@
 				//				},
 				color: ['#ff9800'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
@@ -3635,6 +3610,14 @@
 				//				},
 				color: ['#ef6c00'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
@@ -3719,6 +3702,14 @@
 				//				},
 				color: ['#ef6c00'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
@@ -3803,6 +3794,14 @@
 				//				},
 				color: ['#ef6c00'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
@@ -3887,6 +3886,14 @@
 				//				},
 				color: ['#ec407a'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -3976,6 +3983,14 @@
 				//				},
 				color: ['#ef6c00'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
@@ -4068,6 +4083,14 @@
 				},
 				color: ['#f06292'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -4150,6 +4173,14 @@
 				//				},
 				color: ['#ec407a'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -4235,6 +4266,14 @@
 				//				},
 				color: ['#ec407a'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -4321,6 +4360,14 @@
 				//				},
 				color: ['#ec407a'],
 				calculable: true,
+				dataZoom: [{
+					id: 'dataZoomX',
+					type: 'slider',
+					xAxisIndex: [0],
+					filterMode: 'filter',
+					start: 0,
+                    end: 100
+				}],
 				xAxis: [{
 					type: 'category',
 					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
@@ -5023,6 +5070,156 @@
 					]
 				});
 			}
+			
+			//LAR
+			var myChart9 = echarts.init(document.getElementById("text8"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart9.setOption({
+
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffcc80', '#a5d6a7', '#f48fb1'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '1%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
+	
+			//LIN
+			var myChart10 = echarts.init(document.getElementById("text9"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart10.setOption({
+
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffc107', '#aed581', '#f06292'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '1%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
+			
+			//LOX
+			var myChart11 = echarts.init(document.getElementById("text10"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart11.setOption({
+
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffb74d', '#81c784', '#ec407a'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '1%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
 
 			$scope.mapc = [
 				[],
@@ -6202,10 +6399,8 @@
 				$scope.timechange = false;
 				document.getElementById('d1').style.display = "none";
 				document.getElementById('d4').style.display = "none";
-				document.getElementById('d0').style.display = "block";
-				document.getElementById('dd1').style.display = "none";
-				document.getElementById('date').style.display = "block";
-				document.getElementById('ref').style.display = 'block';
+				document.getElementById('0').style.display = "block";
+				document.getElementById('q').style.display = "none";
 				$scope.iid = undefined;
 			}
 			$scope.back2 = function() {
@@ -6220,12 +6415,10 @@
 				}
 				$scope.timechange = false;
 				document.getElementById('d2').style.display = "none";
+				document.getElementById('q').style.display = "none";
 				document.getElementById('d5').style.display = "none";
-				document.getElementById('d3').style.display = "block";
-				document.getElementById('dd2').style.display = "none";
-				document.getElementById('date').style.display = "block";
-				document.getElementById('ref').style.display = 'block';
-				document.getElementById('text').style.display = "block";
+
+				document.getElementById('0').style.display = "block";
 			}
 
 			$scope.back3 = function() {
@@ -6240,10 +6433,8 @@
 				$scope.timechange = false;
 				document.getElementById('d2').style.display = "none";
 				document.getElementById('de5').style.display = "none";
-				document.getElementById('d3').style.display = "block";
-				document.getElementById('de2').style.display = "none";
-				document.getElementById('date').style.display = "block";
-				document.getElementById('ref').style.display = 'block';
+				document.getElementById('0').style.display = "block";
+				document.getElementById('q').style.display = "none";
 			}
 
 			$scope.clear2 = function() {
