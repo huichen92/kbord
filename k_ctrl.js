@@ -34,8 +34,8 @@
 			var host = 'http://10.17.255.16';
 			var host1 = 'http://10.17.255.44:3000';
 			//var host = 'http://xgjk.fupy.com.cn';
-//			var host = 'http://10.17.255.22';
-//			var host = 'http://10.17.255.22:8088';
+			//			var host = 'http://10.17.255.22';
+			//			var host = 'http://10.17.255.22:8088';
 
 			//=========================================提醒更新版本======by wm=============================================
 			$scope.version = 5;
@@ -195,7 +195,7 @@
 					$scope.ref();
 					$scope.compare = 0;
 					$scope.push();
-					
+
 				}
 			}
 
@@ -789,141 +789,141 @@
 					console.log(err);
 				})
 			}
-			
+
 			//隐藏警报提示框
 			window.localStorage.setItem('tip', 0);
-			$scope.tips = function(){
-				window.localStorage.setItem('tip', 1);
-				document.getElementById('tip').style.display = 'none';
-			}
-			//
-			
+			$scope.tips = function() {
+					window.localStorage.setItem('tip', 1);
+					document.getElementById('tip').style.display = 'none';
+				}
+				//
+
 			//判断库存是否需要报警
 			$scope.maxwarn = '';
 			$scope.minwarn = '';
 			$scope.maxshow = 0;
 			$scope.minshow = 0;
 			$scope.warning = function(dn, dt, dy, dm, d) {
-				var t = window.localStorage.getItem('token');
-				$http.post(host + "/api/services/app/reportDaily/GetReportdailyData", {
-					ProductName: dn,
-					ReportType: dt,
-					ReportYear: dy,
-					ReportMonth: dm,
-					ReportDate: d
-				}, {
-					headers: {
-						'Authorization': 'Bearer ' + t,
-						'Content-Type': 'application/json'
-					}
-				}).success(function(res, status) {
-					var warnres = res.result;
-					switch (dn){
-						case 1:
-							for (var i=0;i<warnres.length;i++) {
-								if(warnres[i].totalDataValueType == 0){
-									switch (warnres[i].materialNumber){
-										case "MT0070":
-											if (Number(warnres[i].dataValue)>15681.62) {
-												$scope.maxwarn+="MEG(T-5001A):"+warnres[i].dataValue+'T; ';
-											} else if(Number(warnres[i].dataValue)<1258.03){
-												$scope.minwarn+="MEG(T-5001A):"+warnres[i].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;
-										case "MT0071":
-											if (Number(warnres[i].dataValue)>15710.62) {
-												$scope.maxwarn+="MEG(T-5001B):"+warnres[i].dataValue+'T; ';
-											} else if(Number(warnres[i].dataValue)<1290.48){
-												$scope.minwarn+="MEG(T-5001B):"+warnres[i].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;
-										case "MT0072":
-											if (Number(warnres[i].dataValue)>2863.87) {
-												$scope.maxwarn+="DEG(T5003):"+warnres[i].dataValue+'T; ';
-											} else if(Number(warnres[i].dataValue)<147.49){
-												$scope.minwarn+="DEG(T5003):"+warnres[i].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;
-										case "MT0073":
-											if (Number(warnres[i].dataValue)>139.51) {
-												$scope.maxwarn+="TEG(T5005):"+warnres[i].dataValue+'T; ';
-											} else if(Number(warnres[i].dataValue)<17.71){
-												$scope.minwarn+="TEG(T5005):"+warnres[i].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;	
-										default:
-											break;
+					var t = window.localStorage.getItem('token');
+					$http.post(host + "/api/services/app/reportDaily/GetReportdailyData", {
+						ProductName: dn,
+						ReportType: dt,
+						ReportYear: dy,
+						ReportMonth: dm,
+						ReportDate: d
+					}, {
+						headers: {
+							'Authorization': 'Bearer ' + t,
+							'Content-Type': 'application/json'
+						}
+					}).success(function(res, status) {
+						var warnres = res.result;
+						switch(dn) {
+							case 1:
+								for(var i = 0; i < warnres.length; i++) {
+									if(warnres[i].totalDataValueType == 0) {
+										switch(warnres[i].materialNumber) {
+											case "MT0070":
+												if(Number(warnres[i].dataValue) > 15681.62) {
+													$scope.maxwarn += "MEG(T-5001A):" + warnres[i].dataValue + 'T; ';
+												} else if(Number(warnres[i].dataValue) < 1258.03) {
+													$scope.minwarn += "MEG(T-5001A):" + warnres[i].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											case "MT0071":
+												if(Number(warnres[i].dataValue) > 15710.62) {
+													$scope.maxwarn += "MEG(T-5001B):" + warnres[i].dataValue + 'T; ';
+												} else if(Number(warnres[i].dataValue) < 1290.48) {
+													$scope.minwarn += "MEG(T-5001B):" + warnres[i].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											case "MT0072":
+												if(Number(warnres[i].dataValue) > 2863.87) {
+													$scope.maxwarn += "DEG(T5003):" + warnres[i].dataValue + 'T; ';
+												} else if(Number(warnres[i].dataValue) < 147.49) {
+													$scope.minwarn += "DEG(T5003):" + warnres[i].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											case "MT0073":
+												if(Number(warnres[i].dataValue) > 139.51) {
+													$scope.maxwarn += "TEG(T5005):" + warnres[i].dataValue + 'T; ';
+												} else if(Number(warnres[i].dataValue) < 17.71) {
+													$scope.minwarn += "TEG(T5005):" + warnres[i].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											default:
+												break;
+										}
 									}
 								}
-							}
-							break;
-						case 2:
-							for (var j=0;j<warnres.length;j++) {
-								if(warnres[j].totalDataValueType == 0){
-									switch (warnres[j].materialNumber){
-										case "MT0045":
-											if (Number(warnres[j].dataValue)>1326.2) {
-												$scope.maxwarn+="LOX:"+warnres[j].dataValue+'T; ';
-											} else if(Number(warnres[j].dataValue)<209.4){
-												$scope.minwarn+="LOX:"+warnres[j].dataValue+'T; ';
-											}else{
-//												console.log('未超出警戒值！')
-											}
-											break;
-										case "MT0047":
-											if (Number(warnres[j].dataValue)>1470.6) {
-												$scope.maxwarn+="LIN:"+warnres[j].dataValue+'T; ';
-											} else if(Number(warnres[j].dataValue)<232.2){
-												$scope.minwarn+="LIN:"+warnres[j].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;
-										case "MT0049":
-											if (Number(warnres[j].dataValue)>826.5) {
-												$scope.maxwarn+="LAR:"+warnres[j].dataValue+'T; ';
-											} else if(Number(warnres[j].dataValue)<130.5){
-												$scope.minwarn+="LAR:"+warnres[j].dataValue+'T; ';
-											}else{
-												console.log('未超出警戒值！')
-											}
-											break;
-										default:
-											break;
+								break;
+							case 2:
+								for(var j = 0; j < warnres.length; j++) {
+									if(warnres[j].totalDataValueType == 0) {
+										switch(warnres[j].materialNumber) {
+											case "MT0045":
+												if(Number(warnres[j].dataValue) > 1326.2) {
+													$scope.maxwarn += "LOX:" + warnres[j].dataValue + 'T; ';
+												} else if(Number(warnres[j].dataValue) < 209.4) {
+													$scope.minwarn += "LOX:" + warnres[j].dataValue + 'T; ';
+												} else {
+													//												console.log('未超出警戒值！')
+												}
+												break;
+											case "MT0047":
+												if(Number(warnres[j].dataValue) > 1470.6) {
+													$scope.maxwarn += "LIN:" + warnres[j].dataValue + 'T; ';
+												} else if(Number(warnres[j].dataValue) < 232.2) {
+													$scope.minwarn += "LIN:" + warnres[j].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											case "MT0049":
+												if(Number(warnres[j].dataValue) > 826.5) {
+													$scope.maxwarn += "LAR:" + warnres[j].dataValue + 'T; ';
+												} else if(Number(warnres[j].dataValue) < 130.5) {
+													$scope.minwarn += "LAR:" + warnres[j].dataValue + 'T; ';
+												} else {
+													console.log('未超出警戒值！')
+												}
+												break;
+											default:
+												break;
+										}
 									}
 								}
+								break;
+							default:
+								break;
+						}
+						if($scope.maxwarn.length != 0 || $scope.minwarn.length != 0) {
+							document.getElementById('tip').style.display = 'block';
+							if($scope.maxwarn.length != 0) {
+								$scope.maxshow = 1;
+							} else {
+								$scope.maxshow = 0;
 							}
-							break;
-						default:
-							break;
-					}
-					if($scope.maxwarn.length != 0 || $scope.minwarn.length != 0){
-						document.getElementById('tip').style.display = 'block';
-						if($scope.maxwarn.length != 0){
-							$scope.maxshow = 1;
-						}else{
-							$scope.maxshow = 0;
+
+							if($scope.minwarn.length != 0) {
+								$scope.minshow = 1;
+							} else {
+								$scope.minshow = 0;
+							}
 						}
-						
-						if($scope.minwarn.length != 0){
-							$scope.minshow = 1;
-						}else{
-							$scope.minshow = 0;
-						}
-					}
-				}).error(function(err, errstatus) {
-					console.log(err);
-				})
-			}
-			//获取库存日累计数据
+					}).error(function(err, errstatus) {
+						console.log(err);
+					})
+				}
+				//获取库存日累计数据
 			$scope.storemax = {
 				"MT0080": 5500,
 				"MT0028": 3166,
@@ -944,13 +944,13 @@
 				"MT0031": 511.1,
 				"MT0034": 85.5,
 				"MT0041": 85.5,
-				"MT0070": 15681.62,//MEG(T-5001A)库存
-				"MT0071": 15710.62,//MEG(T-5001B)库存
-				"MT0072": 2863.87,//DEG库存（T5003)
-				"MT0073": 139.51,//TEG库存（T5005)
-				"MT0045": 1326.2,//LOX总库存
-				"MT0047": 1470.6,//LIN总库存
-				"MT0049": 826.5//LAR总库存
+				"MT0070": 15681.62, //MEG(T-5001A)库存
+				"MT0071": 15710.62, //MEG(T-5001B)库存
+				"MT0072": 2863.87, //DEG库存（T5003)
+				"MT0073": 139.51, //TEG库存（T5005)
+				"MT0045": 1326.2, //LOX总库存
+				"MT0047": 1470.6, //LIN总库存
+				"MT0049": 826.5 //LAR总库存
 			}
 			$scope.warnmin = {
 				"MT0080": 825,
@@ -958,13 +958,13 @@
 				"MT0031": 80.7,
 				"MT0034": 13.5,
 				"MT0041": 13.5,
-				"MT0070": 1258.03,//MEG(T-5001A)库存
-				"MT0071": 1290.48,//MEG(T-5001B)库存
-				"MT0072": 147.49,//DEG库存（T5003)
-				"MT0073": 17.71,//TEG库存（T5005)
-				"MT0045": 209.4,//LOX总库存
-				"MT0047": 232.2,//LIN总库存
-				"MT0049": 130.5//LAR总库存
+				"MT0070": 1258.03, //MEG(T-5001A)库存
+				"MT0071": 1290.48, //MEG(T-5001B)库存
+				"MT0072": 147.49, //DEG库存（T5003)
+				"MT0073": 17.71, //TEG库存（T5005)
+				"MT0045": 209.4, //LOX总库存
+				"MT0047": 232.2, //LIN总库存
+				"MT0049": 130.5 //LAR总库存
 			}
 			$scope.store = [];
 			$scope.riqi = [];
@@ -1002,7 +1002,7 @@
 								})
 								$scope.storedata = [];
 								for(var j = 0; j < res[i].length; j++) {
-									
+
 									$scope.storedata[j] = res[i][j].dataValue;
 									//日期
 									if(i == 0) {
@@ -1012,9 +1012,9 @@
 								if(res[i][0].materialNumber == "MT0070" || res[i][0].materialNumber == "MT0071" || res[i][0].materialNumber == "MT0072" || res[i][0].materialNumber == "MT0073") {
 									switch(res[i][0].materialNumber) {
 										case "MT0070":
-//											var m = res[i][0].materialTypeName.split('(');
-//											console.dir(m)
-//											$scope.ming[i] = m[0] + '(A)';
+											//											var m = res[i][0].materialTypeName.split('(');
+											//											console.dir(m)
+											//											$scope.ming[i] = m[0] + '(A)';
 											$scope.ming[i] = 'MEG(A)'
 											$scope.store.push({
 												'name': $scope.ming[i],
@@ -1022,8 +1022,8 @@
 											});
 											break;
 										case "MT0071":
-//											var m = res[i][0].materialTypeName.split('(');
-//											$scope.ming[i] = m[0] + '(B)';
+											//											var m = res[i][0].materialTypeName.split('(');
+											//											$scope.ming[i] = m[0] + '(B)';
 											$scope.ming[i] = 'MEG(B)';
 											$scope.store.push({
 												'name': $scope.ming[i],
@@ -1031,8 +1031,8 @@
 											});
 											break;
 										case "MT0072":
-//											var m = res[i][0].materialTypeName.split('(');
-//											$scope.ming[i] = m[0];
+											//											var m = res[i][0].materialTypeName.split('(');
+											//											$scope.ming[i] = m[0];
 											$scope.ming[i] = 'DEG';
 											$scope.store.push({
 												'name': $scope.ming[i],
@@ -1040,8 +1040,8 @@
 											});
 											break;
 										case "MT0073":
-//											var m = res[i][0].materialTypeName.split('(');
-//											$scope.ming[i] = m[0];
+											//											var m = res[i][0].materialTypeName.split('(');
+											//											$scope.ming[i] = m[0];
 											$scope.ming[i] = 'TEG';
 											$scope.store.push({
 												'name': $scope.ming[i],
@@ -1753,18 +1753,18 @@
 					$scope.ifchange(yy, m, dd, 1);
 					//能源耗用
 					$scope.ifchange(yy, m, dd, 2);
-					
+
 					var tipshow = window.localStorage.getItem('tip');
-					if(tipshow != 0){
+					if(tipshow != 0) {
 						console.log('不报警！')
-					}else{
-						if(ifwarn == true){
+					} else {
+						if(ifwarn == true) {
 							console.log('无需重新检查警戒值')
-						}else{
+						} else {
 							$scope.warning(1, 3, yy, m, dd);
 							$scope.warning(2, 3, yy, m, dd);
 						}
-						
+
 					}
 				} //end initall
 
@@ -2022,7 +2022,7 @@
 
 					console.log('change')
 				} else {
-					$scope.initall($scope.ry, $scope.rm, $scope.rd,true);
+					$scope.initall($scope.ry, $scope.rm, $scope.rd, true);
 
 				}
 
@@ -2112,12 +2112,12 @@
 				$scope.titmonth = z + $scope.btnmon;
 				//API
 				//获取对应日累积量
-				if($scope.id == 2){
+				if($scope.id == 2) {
 					$scope.daily(y, $scope.id, tt[0], tt[1], 0);
-				}else{
+				} else {
 					$scope.daily(y, $scope.id, $scope.ry, $scope.rm, 0);
 				}
-				
+
 				//获取对应月累计量
 				if($scope.id != 3) {
 					$scope.monthdate(y, $scope.id, $scope.ry, 0);
@@ -2450,19 +2450,19 @@
 				$scope.tit = 'EOG 当日出货量(T)';
 				$scope.btnday = '日出货量';
 				$scope.btnmon = '月出货量';
-//				document.getElementById('d0').style.display = "none";
-//				document.getElementById('d1').style.display = "block";
-//				document.getElementById('dd1').style.display = "block";
-//				document.getElementById('date').style.display = "none";
-//				document.getElementById('crice2').style.display = "none";
-//				document.getElementById('text').style.display = "block";
-//
-//				document.getElementById('tab1').style.backgroundColor = "#0059BC";
-//				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
-//				document.getElementById('d12').style.display = "block";
-//				document.getElementById('d13').style.display = "none";
-//				document.getElementById('ref').style.display = 'none';
-                document.getElementById('0').style.display = "none";
+				//				document.getElementById('d0').style.display = "none";
+				//				document.getElementById('d1').style.display = "block";
+				//				document.getElementById('dd1').style.display = "block";
+				//				document.getElementById('date').style.display = "none";
+				//				document.getElementById('crice2').style.display = "none";
+				//				document.getElementById('text').style.display = "block";
+				//
+				//				document.getElementById('tab1').style.backgroundColor = "#0059BC";
+				//				document.getElementById('tab2').style.backgroundColor = "#6ba4fa";
+				//				document.getElementById('d12').style.display = "block";
+				//				document.getElementById('d13').style.display = "none";
+				//				document.getElementById('ref').style.display = 'none';
+				document.getElementById('0').style.display = "none";
 				document.getElementById('d1').style.display = "block";
 				document.getElementById('q').style.display = "block";
 				$scope.clear2();
@@ -2605,6 +2605,28 @@
 				document.getElementById('q').style.display = "block";
 
 				$scope.clear1();
+			}
+
+			$scope.det10 = function() {
+
+				document.getElementById('0').style.display = "none";
+				document.getElementById('de6').style.display = "block";
+				document.getElementById('q').style.display = "block";
+
+			}
+			$scope.det11 = function() {
+
+				document.getElementById('0').style.display = "none";
+				document.getElementById('de7').style.display = "block";
+				document.getElementById('q').style.display = "block";
+
+			}
+			$scope.det12 = function() {
+
+				document.getElementById('0').style.display = "none";
+				document.getElementById('de8').style.display = "block";
+				document.getElementById('q').style.display = "block";
+
 			}
 
 			//			$scope.pinit = 0;
@@ -3022,86 +3044,85 @@
 								name: '最小值'
 							}]
 						},
-						
+
 					}]
 				})
-				
+
 				$scope.smax = 0;
 				$scope.wmax = 0;
 				$scope.wmin = 0;
-				if(id == 3){
+				if(id == 3) {
 					$scope.smax = $scope.storemax[y];
 					$scope.wmax = $scope.warnmax[y];
 					$scope.wmin = $scope.warnmin[y];
-					
-					myChartab.setOption({
-					title: {
-						text: $scope.titday,
-						top: '0px',
-						left: '2px'
-					},
-					yAxis: [{
-						max: $scope.smax
-					}],
 
-					visualMap: {
-						top: 10,
-						right: 10,
-						orient:'horizontal',
-						pieces: [{
-							gt: 0,
-							lte: $scope.wmin,
-							color: '#40c4ff'
-						}, {
-							gt: $scope.wmin,
-							lte: $scope.wmax,
-							color: '#ffb300'
-						}, {
-							gt: $scope.wmax,
-							lte: $scope.smax,
-							color: '#ec407a'
-						}]
-					},
-					series: [{
-						name: '日库存量',
-						type: 'line',
-						//									data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 115.6, 122.2, 132.6, 50.0, 6.4, 13.3, 32.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3, 2, 3, 4, 5, 6, 7, 8],
-						data: $scope.dataday,
-						markPoint: {
-							data: [{
-								type: 'max',
-								name: '最大值'
+					myChartab.setOption({
+						title: {
+							text: $scope.titday,
+							top: '0px',
+							left: '2px'
+						},
+						yAxis: [{
+							max: $scope.smax
+						}],
+
+						visualMap: {
+							top: 10,
+							right: 10,
+							orient: 'horizontal',
+							pieces: [{
+								gt: 0,
+								lte: $scope.wmin,
+								color: '#40c4ff'
 							}, {
-								type: 'min',
-								name: '最小值'
+								gt: $scope.wmin,
+								lte: $scope.wmax,
+								color: '#ffb300'
+							}, {
+								gt: $scope.wmax,
+								lte: $scope.smax,
+								color: '#ec407a'
 							}]
 						},
-						markLine: {
+						series: [{
+							name: '日库存量',
+							type: 'line',
+							//									data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 115.6, 122.2, 132.6, 50.0, 6.4, 13.3, 32.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3, 2, 3, 4, 5, 6, 7, 8],
+							data: $scope.dataday,
+							markPoint: {
+								data: [{
+									type: 'max',
+									name: '最大值'
+								}, {
+									type: 'min',
+									name: '最小值'
+								}]
+							},
+							markLine: {
 
-							data: [{
-								yAxis: $scope.wmin,
-								name:'低报',
-								lineStyle: {
-									normal: {
-										color: '#40c4ff'
-									}
-								},
-							}, {
-								yAxis: $scope.wmax,
-								name:'高报',
-								lineStyle: {
-									normal: {
-										color: '#ec407a'
-									}
-								},
-							}]
-						}
-					}]
-				})
-					
+								data: [{
+									yAxis: $scope.wmin,
+									name: '低报',
+									lineStyle: {
+										normal: {
+											color: '#40c4ff'
+										}
+									},
+								}, {
+									yAxis: $scope.wmax,
+									name: '高报',
+									lineStyle: {
+										normal: {
+											color: '#ec407a'
+										}
+									},
+								}]
+							}
+						}]
+					})
+
 				}
-				
-				
+
 				myChartaa.setOption({
 					title: {
 						text: $scope.titmonth,
@@ -3122,10 +3143,10 @@
 								name: '最小值'
 							}]
 						},
-						
+
 					}]
 				})
-				
+
 				//原料日累积
 				myCharts1.setOption({
 					title: {
@@ -3147,7 +3168,7 @@
 								name: '最小值'
 							}]
 						},
-						
+
 					}]
 				})
 
@@ -3171,7 +3192,7 @@
 								name: '最小值'
 							}]
 						},
-						
+
 					}]
 				})
 
@@ -3196,12 +3217,12 @@
 									name: '最小值'
 								}]
 							},
-//							markLine: {
-//								data: [{
-//									type: 'average',
-//									name: '平均值'
-//								}]
-//							}
+							//							markLine: {
+							//								data: [{
+							//									type: 'average',
+							//									name: '平均值'
+							//								}]
+							//							}
 						}]
 					})
 					//能源月累计
@@ -3224,12 +3245,12 @@
 								name: '最小值'
 							}]
 						},
-//						markLine: {
-//							data: [{
-//								type: 'average',
-//								name: '平均值'
-//							}]
-//						}
+						//						markLine: {
+						//							data: [{
+						//								type: 'average',
+						//								name: '平均值'
+						//							}]
+						//						}
 					}]
 				})
 			}
@@ -3256,7 +3277,7 @@
 										name: '最小值'
 									}]
 								},
-								
+
 							}]
 						})
 						//原料月单耗
@@ -3280,7 +3301,7 @@
 									name: '最小值'
 								}]
 							},
-							
+
 						}]
 					})
 
@@ -3308,7 +3329,7 @@
 										name: '最小值'
 									}]
 								},
-								
+
 							}]
 						})
 						//能源月单耗
@@ -3332,12 +3353,12 @@
 									name: '最小值'
 								}]
 							},
-//							markLine: {
-//								data: [{
-//									type: 'average',
-//									name: '平均值'
-//								}]
-//							}
+							//							markLine: {
+							//								data: [{
+							//									type: 'average',
+							//									name: '平均值'
+							//								}]
+							//							}
 						}]
 					})
 
@@ -3345,6 +3366,7 @@
 
 			var myCharta = echarts.init(document.getElementById("d12"));
 			myCharta.setOption({
+
 				title: {
 					text: $scope.titday,
 					top: '0px',
@@ -3379,20 +3401,21 @@
 								}
 							}
 						},
-						//											restore: {
-						//												show: true
-						//											}
+
 					}
 				},
 				color: ['#ff9800'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					boundaryGap: false,
@@ -3410,8 +3433,8 @@
 				series: [{
 					name: '日累积量',
 					type: 'bar',
-														data: ['2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2', '2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2','2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2','2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2'],
-//					data: $scope.dataday,
+					data: ['2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2', '2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2', '2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2', '2.0', '4.9', '7.0', '23.2', '25.6', '76.7', '115.6', '122.2'],
+					//					data: $scope.dataday,
 					markPoint: {
 						data: [{
 							type: 'max',
@@ -3437,7 +3460,7 @@
 						},
 						symbolSize: 48,
 					},
-					
+
 				}]
 			});
 			var myChartab = echarts.init(document.getElementById("d121"));
@@ -3481,12 +3504,15 @@
 				color: ['#ff9800'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -3506,20 +3532,20 @@
 				visualMap: {
 					top: 10,
 					right: 10,
-					orient:'horizontal',
+					orient: 'horizontal',
 					pieces: [{
 						gt: 0,
-						lte: 300,//$scope.wmin,
+						lte: 300, //$scope.wmin,
 						color: '#40c4ff'
 					}, {
-						gt: 300,//$scope.wmin,
-						lte: 1300,//$scope.wmax,
+						gt: 300, //$scope.wmin,
+						lte: 1300, //$scope.wmax,
 						color: '#ffb300'
 					}, {
-							gt: 1300,//$scope.wmax,
-							lte: 3000,//$scope.smax,
-							color: '#ec407a'
-						}]
+						gt: 1300, //$scope.wmax,
+						lte: 3000, //$scope.smax,
+						color: '#ec407a'
+					}]
 				},
 				series: [{
 					name: '日库存量',
@@ -3547,17 +3573,17 @@
 					},
 					markLine: {
 
-						data: [ {
-							yAxis: '300',//$scope.wmin,
-							name:'低报',
+						data: [{
+							yAxis: '300', //$scope.wmin,
+							name: '低报',
 							lineStyle: {
 								normal: {
 									color: '#40c4ff'
 								}
 							},
 						}, {
-							yAxis: '1300',//$scope.wmax,
-							name:'高报',
+							yAxis: '1300', //$scope.wmax,
+							name: '高报',
 							lineStyle: {
 								normal: {
 									color: '#ec407a'
@@ -3611,12 +3637,15 @@
 				color: ['#ef6c00'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -3655,7 +3684,7 @@
 						},
 						symbolSize: 70,
 					},
-					
+
 				}]
 			});
 			//			原料日累积
@@ -3703,12 +3732,15 @@
 				color: ['#ef6c00'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -3747,7 +3779,7 @@
 						},
 						symbolSize: 70,
 					},
-					
+
 				}]
 			});
 
@@ -3795,12 +3827,15 @@
 				color: ['#ef6c00'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -3839,7 +3874,7 @@
 						},
 						symbolSize: 70,
 					},
-					
+
 				}]
 			});
 
@@ -3887,12 +3922,15 @@
 				color: ['#ec407a'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -3931,12 +3969,12 @@
 						},
 						symbolSize: 70,
 					},
-//					markLine: {
-//						data: [{
-//							type: 'average',
-//							name: '平均值'
-//						}]
-//					}
+					//					markLine: {
+					//						data: [{
+					//							type: 'average',
+					//							name: '平均值'
+					//						}]
+					//					}
 				}]
 			});
 			//			能源日累积
@@ -3984,12 +4022,15 @@
 				color: ['#ef6c00'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -4028,12 +4069,12 @@
 						},
 						symbolSize: 70,
 					},
-//					markLine: {
-//						data: [{
-//							type: 'average',
-//							name: '平均值'
-//						}]
-//					}
+					//					markLine: {
+					//						data: [{
+					//							type: 'average',
+					//							name: '平均值'
+					//						}]
+					//					}
 				}]
 			});
 
@@ -4084,12 +4125,15 @@
 				color: ['#f06292'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -4127,7 +4171,7 @@
 						},
 						symbolSize: 48,
 					},
-					
+
 				}]
 			});
 			var myChart1 = echarts.init(document.getElementById("d132"));
@@ -4174,12 +4218,15 @@
 				color: ['#ec407a'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -4218,7 +4265,7 @@
 						},
 						symbolSize: 70,
 					},
-					
+
 				}]
 			});
 
@@ -4267,12 +4314,15 @@
 				color: ['#ec407a'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -4311,7 +4361,7 @@
 						},
 						symbolSize: 70,
 					},
-					
+
 				}]
 			});
 
@@ -4361,12 +4411,15 @@
 				color: ['#ec407a'],
 				calculable: true,
 				dataZoom: [{
-					id: 'dataZoomX',
-					type: 'slider',
-					xAxisIndex: [0],
-					filterMode: 'filter',
-					start: 0,
-                    end: 100
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66
 				}],
 				xAxis: [{
 					type: 'category',
@@ -4405,12 +4458,12 @@
 						},
 						symbolSize: 70,
 					},
-//					markLine: {
-//						data: [{
-//							type: 'average',
-//							name: '平均值'
-//						}]
-//					}
+					//					markLine: {
+					//						data: [{
+					//							type: 'average',
+					//							name: '平均值'
+					//						}]
+					//					}
 				}]
 			});
 
@@ -5070,7 +5123,7 @@
 					]
 				});
 			}
-			
+
 			//LAR
 			var myChart9 = echarts.init(document.getElementById("text8"));
 
@@ -5120,7 +5173,7 @@
 					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
 				}]
 			});
-	
+
 			//LIN
 			var myChart10 = echarts.init(document.getElementById("text9"));
 
@@ -5170,7 +5223,7 @@
 					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
 				}]
 			});
-			
+
 			//LOX
 			var myChart11 = echarts.init(document.getElementById("text10"));
 
@@ -5220,6 +5273,221 @@
 					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
 				}]
 			});
+
+			var myChart12 = echarts.init(document.getElementById("dd6"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart12.setOption({
+				title: {
+					text: 'LAR销售价',
+					textStyle: {
+						fontSize: '15',
+						fontWeight: '600',
+						color: '424242'
+					},
+					
+
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffcc80', '#a5d6a7', '#f48fb1'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '16%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				dataZoom: [{
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}],
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
+			
+			var myChart13 = echarts.init(document.getElementById("dd7"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart13.setOption({
+				title: {
+					text: 'LAR销售价',
+					textStyle: {
+						fontSize: '15',
+						fontWeight: '600',
+						color: '424242'
+					},
+					
+
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffc107', '#aed581', '#f06292'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '16%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				dataZoom: [{
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}],
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
+			
+			var myChart14 = echarts.init(document.getElementById("dd8"));
+
+			//			$scope.mc9 = function(e, p) {
+			myChart14.setOption({
+				title: {
+					text: 'LAR销售价',
+					textStyle: {
+						fontSize: '15',
+						fontWeight: '600',
+						color: '424242'
+					},
+					
+
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				color: ['#ffb74d', '#81c784', '#ec407a'],
+				grid: {
+					left: '1%',
+					right: '2%',
+					//						top: '20%',
+					bottom: '16%',
+					containLabel: true
+				},
+				legend: {
+					data: ['含税均价', '市场价', '牌价']
+				},
+				dataZoom: [{
+					show: true,
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}, {
+					type: 'inside',
+					realtime: true,
+					start: 33,
+					end: 66,
+					top: 530
+				}],
+				xAxis: [{
+					type: 'category',
+					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				}],
+				yAxis: [{
+					type: 'value',
+					name: '价格[元]',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} '
+					}
+				}],
+				series: [{
+					name: '含税均价',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				}, {
+					name: '市场价',
+					type: 'bar',
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				}, {
+					name: '牌价',
+					type: 'line',
+					//					yAxisIndex: 1,
+					data: [2.0, 2.2, 3.3, 14.5, 26.3, 50.2, 80.3, 83.4, 23.0, 16.5, 12.0, 6.2]
+				}]
+			});
+
+
 
 			$scope.mapc = [
 				[],
@@ -6433,6 +6701,17 @@
 				$scope.timechange = false;
 				document.getElementById('d2').style.display = "none";
 				document.getElementById('de5').style.display = "none";
+				document.getElementById('0').style.display = "block";
+				document.getElementById('q').style.display = "none";
+			}
+			$scope.back4 = function() {
+
+				document.getElementById('d2').style.display = "none";
+				document.getElementById('de6').style.display = "none";
+				document.getElementById('de7').style.display = "none";
+				document.getElementById('de8').style.display = "none";
+				
+				
 				document.getElementById('0').style.display = "block";
 				document.getElementById('q').style.display = "none";
 			}
