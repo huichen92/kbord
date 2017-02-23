@@ -2689,6 +2689,7 @@
 						$scope.init4($scope.week2j, $scope.weekdata2j, 2);
 						break;
 					case 2:
+						
 						$scope.init4($scope.weekj, $scope.weekdataj, 1);
 						break;
 					case 3:
@@ -6568,6 +6569,7 @@
 			}
 
 			$scope.table10 = function() {
+				$scope.pricetype = 3;
 				$scope.iflist = 0;
 				document.getElementById('a3').style.backgroundColor = "transparent";
 				document.getElementById('a2').style.backgroundColor = "transparent";
@@ -6613,6 +6615,7 @@
 			}
 
 			$scope.table11 = function() {
+				$scope.pricetype = 1;
 				$scope.iflist = 0;
 				document.getElementById('a1').style.backgroundColor = "#1a237e";
 				document.getElementById('a2').style.backgroundColor = "transparent";
@@ -6942,6 +6945,7 @@
 			}
 
 			$scope.table15 = function() {
+					$scope.pricetype = 2;
 					$scope.iflist = 0;
 					document.getElementById('a5').style.backgroundColor = "#1a237e";
 					document.getElementById('a2').style.backgroundColor = "transparent";
